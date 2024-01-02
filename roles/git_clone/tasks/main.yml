@@ -1,0 +1,8 @@
+---
+- name: Clone a repository
+  git:
+    repo: 'https://github.com/ms1546/setting.git'
+    dest: ../new_repo/
+    clone: yes
+    update: yes
+...

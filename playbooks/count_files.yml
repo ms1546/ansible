@@ -1,0 +1,6 @@
+---
+- name: Create a File and Count Files in Directory
+  hosts: localhost
+  become: false
+  roles:
+    - count_files

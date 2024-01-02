@@ -1,0 +1,8 @@
+---
+- name: Wait for host to become reachable
+  ansible.builtin.ping:
+  register: ping_result
+  until: ping_result is success
+  retries: 10
+  delay: 10
+...

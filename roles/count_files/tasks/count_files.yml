@@ -1,0 +1,10 @@
+---
+- name: Count files in the specified directory
+  count_files:
+    path: ../
+  register: result
+
+- name: Show file count
+  debug:
+    msg: "There are {{ result.files_count }} files in {{ result.path }}"
+...

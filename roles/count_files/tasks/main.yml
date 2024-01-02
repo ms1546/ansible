@@ -1,0 +1,13 @@
+---
+- name: ping check
+  import_tasks: ping.yml
+
+- name: Create a file
+  import_tasks: create_file.yml
+
+- name: confirm a file
+  include_tasks: confirm_file.yml
+
+- name: Count files in the directory
+  include_tasks: count_files.yml
+...

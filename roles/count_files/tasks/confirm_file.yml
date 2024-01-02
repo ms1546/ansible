@@ -1,0 +1,16 @@
+---
+- name: Check for the existence of a specific file
+  ansible.builtin.stat:
+    path: ../test.txt
+  register: file_status
+
+- name: Print message if the file exists
+  debug:
+    msg: "File exists."
+  when: file_status.stat.exists
+
+- name: Print message if the file does not exist # エラーで停止
+  fail:
+    msg: "File does not exist."
+  when: not file_status.stat.exists
+...

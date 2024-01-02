@@ -1,0 +1,9 @@
+---
+- name: Create a File
+  copy:
+    content: |
+      これはサンプルテキストです。
+      Ansibleによって作成されました。
+    dest: ../test.txt # [playbook].yamlからの相対パス
+  become: no
+...
